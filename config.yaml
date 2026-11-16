@@ -1,0 +1,78 @@
+# Критерии ТЗ заказчика. Под другое ТЗ меняется только этот файл.
+# Пример ТЗ: «Датасет коротких видео "город и транспорт", 150–250 роликов,
+# открытая лицензия, 5–60 с, от 1280×720, 24–60 к/с, без дублей и почти-дублей».
+
+project:
+  name: "Город и транспорт — короткие видео"
+  target_min: 150          # сколько записей нужно в итоге (минимум)
+  target_max: 250          # сколько записей нужно в итоге (максимум)
+  seed: 42                 # для воспроизводимой случайной выборки
+
+api:
+  # User-Agent описывает проект; личные данные сюда не пишем
+  user_agent: "DatasetDemo/1.0 (portfolio demo: curated dataset of openly licensed short videos)"
+  delay_s: 2.0             # пауза между запросами к API, сек
+  media_delay_s: 2.5       # пауза между обращениями к файлам и миниатюрам (сервер файлов строже API)
+
+collect:
+  max_candidates: 800      # сколько кандидатов собрать с запасом
+  per_theme_max: 200       # не больше стольких кандидатов на одну тему (баланс)
+  # тема -> категории Викисклада; depth — на сколько уровней спускаться в подкатегории
+  themes:
+    "Трамваи":
+      - {category: "Videos of trams", depth: 2}
+    "Автобусы и троллейбусы":
+      - {category: "Videos of buses", depth: 1}
+      - {category: "Videos of trolleybuses", depth: 1}
+    "Метро":
+      - {category: "Videos of rapid transit", depth: 1}
+    "Поезда":
+      - {category: "Videos of passenger trains", depth: 1}
+      - {category: "Videos of trains on level crossings", depth: 0}
+    "Улицы и дорожное движение":
+      - {category: "Videos of road traffic", depth: 0}
+      - {category: "Videos of urban cycling", depth: 0}
+      - {category: "Videos of pedestrians", depth: 0}
+    "Город, таймлапс":
+      - {category: "Time-lapse videos of cities", depth: 1}
+  # подкатегории и файлы с такими словами в категориях пропускаются сразу
+  exclude_category_words:
+    - "AI-generated"
+    - "Animations"
+    - "Animated"
+    - "Silent films"
+    - "accidents"
+    - "Computer-generated"
+    - "Video games"
+    - "Simulators"
+
+criteria:
+  licenses_allowed:        # короткие названия лицензий (поле LicenseShortName), сравнение по началу строки
+    - "CC0"
+    - "CC BY "             # CC BY 2.0/3.0/4.0 (пробел важен — чтобы не совпало с CC BY-NC)
+    - "CC BY-SA "
+    - "Public domain"
+    - "PD"
+  licenses_forbidden_words: ["NC", "ND", "Fair use", "GFDL-only"]
+  require_author: true     # без автора/источника запись не берём (нечем делать атрибуцию)
+  duration_min_s: 5
+  duration_max_s: 60
+  min_width: 1280          # проверяется по длинной стороне кадра
+  min_height: 720          # проверяется по короткой стороне кадра
+  fps_min: 24
+  fps_max: 60
+  mime_allowed: ["video/webm", "application/ogg", "video/ogg", "video/mpeg"]
+  # слова в названии файла, при которых ролик точно не по теме (найдены при ручном просмотре)
+  exclude_title_words: ["moon", "eclipse", "openstreetmap", "map is changing", "treetop"]
+
+dedup:
+  frames_at: [0.2, 0.5, 0.8]   # доли длительности, где берём кадры
+  hash: "phash"                # перцептивный хэш (imagehash)
+  max_distance: 10             # средняя дистанция по кадрам ≤ этого — почти-дубль
+  workers: 2                   # одновременных запросов к серверу миниатюр (правила Wikimedia: не больше 2)
+  preview_width: 320           # ширина кадра превью, px
+
+report:
+  contact_sheet_cols: 6
+  contact_sheet_rows: 5
+  manual_check_n: 25

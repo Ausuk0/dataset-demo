@@ -1,0 +1,53 @@
+[
+ {
+  "pageid": 102686038,
+  "title": "File:Ce soir, -paris s'est mobilisée lors de -EarthHour en éteignant -LaTourEiffel -Cities4Climate - 25821383731.webm",
+  "theme": "Город, таймлапс",
+  "source_category": "Time-lapse videos from Paris",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Ce_soir%2C_-paris_s%27est_mobilis%C3%A9e_lors_de_-EarthHour_en_%C3%A9teignant_-LaTourEiffel_-Cities4Climate_-_25821383731.webm",
+  "page_url": "https://commons.wikimedia.org/wiki/File:Ce_soir,_-paris_s%27est_mobilis%C3%A9e_lors_de_-EarthHour_en_%C3%A9teignant_-LaTourEiffel_-Cities4Climate_-_25821383731.webm",
+  "author": "Yann Caradec",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "attribution_required": "true",
+  "duration_s": 7.92,
+  "width": 1280,
+  "height": 720,
+  "size_mb": 0.84,
+  "mime": "video/webm",
+  "sha1": "ab5b1dca17786e07b67c1773c3beb7ed6b26429d",
+  "categories": "Files from external sources with reviewed licenses|Earth hour in France|Eiffel Tower at night|Eiffel Tower special events|March 2016 in Paris|Uploaded with video2commons|Eiffel Tower in 2016|Videos of 2016 from France|Earth hour 2016|Videos of the Eiffel Tower|Photographs by Yann Caradec|Time-lapse videos from Paris|Videos of Earth hour",
+  "description": "Ce soir, #paris s'est mobilisée lors de #EarthHour en éteignant #LaTourEiffel #Cities4Climate",
+  "derivatives": [
+   {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3a/Ce_soir%2C_-paris_s%27est_mobilis%C3%A9e_lors_de_-EarthHour_en_%C3%A9teignant_-LaTourEiffel_-Cities4Climate_-_25821383731.webm/Ce_soir%2C_-paris_s%27est_mobilis%C3%A9e_lors_de_-EarthHour_en_%C3%A9teignant_-LaTourEiffel_-Cities4Climate_-_25821383731.webm.240p.vp9.webm",
+    "type": "video/webm; codecs=\"vp9, opus\"",
+    "transcodekey": "240p.vp9.webm",
+    "width": 426,
+    "height": 240,
+    "bandwidth": 179416
+   },
+   {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3a/Ce_soir%2C_-paris_s%27est_mobilis%C3%A9e_lors_de_-EarthHour_en_%C3%A9teignant_-LaTourEiffel_-Cities4Climate_-_25821383731.webm/Ce_soir%2C_-paris_s%27est_mobilis%C3%A9e_lors_de_-EarthHour_en_%C3%A9teignant_-LaTourEiffel_-Cities4Climate_-_25821383731.webm.360p.mpeg4.mov",
+    "type": "video/quicktime; codecs=\"mp4v\"",
+    "transcodekey": "360p.mpeg4.mov",
+    "width": 640,
+    "height": 360,
+    "bandwidth": 486064
+   },
+   {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3a/Ce_soir%2C_-paris_s%27est_mobilis%C3%A9e_lors_de_-EarthHour_en_%C3%A9teignant_-LaTourEiffel_-Cities4Climate_-_25821383731.webm/Ce_soir%2C_-paris_s%27est_mobilis%C3%A9e_lors_de_-EarthHour_en_%C3%A9teignant_-LaTourEiffel_-Cities4Climate_-_25821383731.webm.480p.vp9.webm",
+    "type": "video/webm; codecs=\"vp9, opus\"",
+    "transcodekey": "480p.vp9.webm",
+    "width": 854,
+    "height": 480,
+    "bandwidth": 609272
+   }
+  ],
+  "fps": 29.97,
+  "fps_source": "метаданные потока",
+  "preview_frame": "previews/102686038.jpg",
+  "stage": "C: дедупликация",
+  "reason": "почти-дубль записи commons-102686090 (оставлена: 1920×1080), дистанция pHash 6.0"
+ }
+]
